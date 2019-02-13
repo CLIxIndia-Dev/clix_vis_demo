@@ -1,0 +1,50 @@
+/*
+  Reset some basic elements
+*/
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul,figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 90%;
+  margin : auto;	
+}
+/*
+  Basic styling
+*/
+
+body {
+  font-family: $base-font-family;
+  // font: 10px sans-serif;
+}
+
+body img {
+    align: middle;
+    margin: 5px auto auto auto;
+    display: block;
+    max-width: 600px;
+}
+
+p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+
+  line-height: 1.65;
+  font-family: $body-font-family;
+}
+
+/*
+  Links
+*/
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+}

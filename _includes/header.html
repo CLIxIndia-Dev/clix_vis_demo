@@ -1,0 +1,32 @@
+<header class="site-header">
+  <!-- <div>
+    <img src="{{ site.github.url }}/images/Clix_logo.png" style="max-width:200px"/>
+  </div> -->
+  <h3 class="site-title">
+    <!-- <a href="{{ site.github.url }}/">{{ site.data.settings.title }}</a> -->
+    <a href="{{ site.github.url }}/index.html"><img src="{{ site.github.url }}/images/Clix_logo.png" style="max-width:200px; max-height:36px ;"/></a>
+  </h3>
+  <nav class="menu-list">
+    {% for item in site.data.settings.menu %}
+      <a href="{{ site.github.url }}/pages/{{ item.file }}" class="menu-link">{{ item.name }}</a>
+    {% endfor %}
+
+    {% for item in site.data.settings.social %}
+      <a href="{{ item.link }}" class="menu-link"><i class="fa fa-{{ item.icon }}" aria-hidden="true" target="_blank"></i></a>
+    {% endfor %}
+  </nav>
+<!-- <h2>CLIx DATA VISUALIZATION</h2> -->
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="dropdown-content">
+      {% for item in site.data.settings.menu %}
+        <a href="{{ site.github.url }}/pages/{{ item.file }}" class="menu-link">{{ item.name }}</a>
+      {% endfor %}
+
+      {% for item in site.data.settings.social %}
+        <a href="{{ item.link }}" class="menu-link"><i class="fa fa-{{ item.icon }}" aria-hidden="true" target="_blank"></i></a>
+      {% endfor %}
+    </div>
+  </div>
+
+</header>

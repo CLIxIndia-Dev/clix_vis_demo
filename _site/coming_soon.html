@@ -1,0 +1,184 @@
+<head>
+
+  <title>
+    
+      
+    
+  </title>
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+</head>
+
+
+<div class="container">
+  <header class="site-header">
+  <!-- <div>
+    <img src="/images/Clix_logo.png" style="max-width:200px"/>
+  </div> -->
+  <h3 class="site-title">
+    <!-- <a href="/">Clix Data Visualization</a> -->
+    <a href="/index.html"><img src="/images/Clix_logo.png" style="max-width:200px; max-height:36px ;"/></a>
+  </h3>
+  <nav class="menu-list">
+    
+      <a href="/pages/about.html" class="menu-link">About</a>
+    
+      <a href="/pages/visualisations.html" class="menu-link">Visualisations</a>
+    
+      <a href="/pages/documentation.html" class="menu-link">Documentation</a>
+    
+      <a href="/pages/faq.html" class="menu-link">FAQ</a>
+    
+      <a href="/pages/contact.html" class="menu-link">Contact</a>
+    
+
+    
+      <a href="" class="menu-link"><i class="fa fa-" aria-hidden="true" target="_blank"></i></a>
+    
+  </nav>
+<!-- <h2>CLIx DATA VISUALIZATION</h2> -->
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="dropdown-content">
+      
+        <a href="/pages/about.html" class="menu-link">About</a>
+      
+        <a href="/pages/visualisations.html" class="menu-link">Visualisations</a>
+      
+        <a href="/pages/documentation.html" class="menu-link">Documentation</a>
+      
+        <a href="/pages/faq.html" class="menu-link">FAQ</a>
+      
+        <a href="/pages/contact.html" class="menu-link">Contact</a>
+      
+
+      
+        <a href="" class="menu-link"><i class="fa fa-" aria-hidden="true" target="_blank"></i></a>
+      
+    </div>
+  </div>
+
+</header>
+
+  <div class="posts-wrapper">
+    <style>
+body, html {
+    height: 100%
+}
+
+.bgimg {
+    /* Background image */
+    background-image: url('/images/forest_bridge.jpg');
+    /* Full-screen */
+    height: 100%;
+    /* Center the background image */
+    background-position: center;
+    /* Scale and zoom in the image */
+    background-size: cover;
+    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+    position: relative;
+    /* Add a white text color to all elements inside the .bgimg container */
+    color: white;
+    /* Add a font */
+    font-family: "Courier New", Courier, monospace;
+    /* Set the font-size to 25 pixels */
+    font-size: 25px;
+}
+
+/* Position text in the top-left corner */
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+
+/* Position text in the bottom-left corner */
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+/* Position text in the middle */
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Style the <hr> element */
+hr {
+    margin: auto;
+    width: 40%;
+}
+</style>
+
+<body>
+<div class="bgimg">
+  
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+  </div>
+  <div class="bottomleft">
+    <p> We are compiling our work in presentable format..</p>
+  </div>
+</div>
+
+<script type="text/javascript">
+  countDownDate = new Date("Aug 31, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+</script>
+</body>
+
+  </div>
+  <footer class="footer" >
+
+<div class="post-date">
+	<a >MIT License | Connected Learning Initiative, CIER, TISS
+        <span class="copyright">
+    &copy; 2019
+       </span>
+	</a>
+
+</div>
+</footer>
+
+</div>

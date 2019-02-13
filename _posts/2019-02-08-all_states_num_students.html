@@ -1,0 +1,65 @@
+---
+layout: projectpages
+title: "Average Number of Students in a Day"
+author: "partha"
+categories: visualstools
+caption: average number of students accessing tools in a day - all schools
+tags: [tools, average_number_of_students]
+image:
+      feature : visuals_ss.png
+---
+
+<p >
+For each tool, average number of students accessing it in a day during the observation period is calculated. Each bar corresponds to a school and average number of students in a day along y-axis. Different colors correspond to different tools. Please note summed up number along y-axis doesnt have any meaning as averaging is done for each tool across different time periods(in a given school).&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics">calculations</a>
+</p>
+<!--helped by: http://bl.ocks.org/yuuniverse4444/8325617-->
+<meta charset="utf-8">
+<style>
+p{
+  text-align: center;
+  margin: 10px 0;
+  display: block;
+  line-height: 1.65;
+  font-family: Georgia,  serif;
+  padding: 0;
+  font-size: large;
+}
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.tooltip{
+  text-anchor: middle;
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  fill:black;
+}
+
+</style>
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.13/d3.min.js">
+</script>
+
+<script type="text/javascript">
+{% include D3/all_states_stacked_bar_chart_num_students_d3.js %}
+
+</script>
+
+
+

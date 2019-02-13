@@ -1,0 +1,20 @@
+---
+layout: projectpages
+title: Visualisations
+---
+<p style = "text-align: center"> Visualisations are an excellent tool for exploring datasets, which are huge and have multiple dimensions and layers. They let people slice and dice complicated data across different dimensions based on individual's research question and get better visual insight of the data. This page contains various categories of visualisations, we could collate using CLIx platform data. 
+</p>
+
+<div >
+{% for post in site.categories.visualisationtype %}
+<a style = "text-decoration: none" href={{site.github.url}}{{post.url}}>
+	<figure>
+	<img src = {{site.github.url}}/images/{{post.image.feature}} alt= "image" style="max-width:417px; max-height:172px">
+         <figcaption>
+		 {{post.caption}} 
+	</figcaption>  	 
+	</figure>
+   </a>
+
+{% endfor %} 
+</div>

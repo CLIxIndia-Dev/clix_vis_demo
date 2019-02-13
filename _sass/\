@@ -1,0 +1,17 @@
+
+header {
+  padding-bottom: 0.5em;
+  margin: 3.75em 0 1em;
+}
+
+#content header h1 {
+  color: #3391FF;
+}
+
+#content .container {
+  padding-right: 15px; 
+  padding-left: 15px;
+  margin-right: auto; 
+  margin-left: auto;
+}
+

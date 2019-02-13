@@ -1,0 +1,11 @@
+# Site Settings
+
+disqus:              #"your-disqus"
+
+paginate:            1
+
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+plugins:                [jekyll-paginate]

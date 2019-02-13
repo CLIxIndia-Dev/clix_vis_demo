@@ -1,0 +1,35 @@
+---
+layout: pageservices
+title: "FAQ"
+author: "pardhu448"
+categories: services
+tages: [faq, questions]
+faq:
+  -  question: What is the primary source of data for these visualisations?
+     answer: For tools section of the platform it is jason files created whenever a student clicks on the tool 
+     activity and for course module section they are progress csv's generated every hour.   
+  -  question: For some visualisations y-axis numbers dont make sense, is it true?
+     answer: Yes, for some measures this is true. These specific cases are clearly mentioned in the visualisation notes and the documentation. In these cases the graph 
+      is meant to be used to compare numbers across different tools or courses in a given school.
+  -  question: How do we check if these numbers are correct?
+     answer: There is data source section in this website, where you can download underlying data for these visualisations. These datasets are granular enough to arrive at numbers on visualisations, can easily check for some cases manually in csv files.
+  -  question: What is it with top 50 schoools in each graph?
+     answer: This is just not to clutter graph with insignificant numbers. We choose top fifty schools based on the measure under consideration.
+  -  question: Can we choose two tools or modules at a time to compare them ?
+     answer: Right now this is not available. We will try to accoomodate that in future.
+---
+
+<div class="featured-image">
+</div>
+<section class="faq">
+	<ul>
+		{% for item in page.faq %}
+			<li><a href="#{{ item.question | slugify }}">{{ item.question }}</a></li>
+		{% endfor %}
+	</ul>
+
+	{% for item in page.faq %}
+		<h2 id="{{ item.question | slugify}}">{{ item.question }}<a class="header-link" href="#{{ item.question | slugify }}">#</a></h2>
+		{{ item.answer | markdownify }}
+	{% endfor %}
+</section>

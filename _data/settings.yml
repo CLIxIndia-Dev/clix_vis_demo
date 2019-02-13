@@ -1,0 +1,32 @@
+title:  "Clix Data Visualization"
+description:
+author:
+  name: "pardhu448"
+  twitter: 
+
+menu:
+- {name: 'About', file: 'about.html'}
+- {name: 'Visualisations', file: 'visualisations.html'}
+- {name: 'Documentation', file: 'documentation.html'}
+- {name: 'FAQ', file: 'faq.html'}
+- {name: 'Contact', file: 'contact.html'}
+
+social:
+- {icon: , link: }
+
+servicesslide:
+- {title: 'Visualisations', file: 'visualisations.html', image: 'visualisation_image.png'}
+- {title: 'Documentation', file : 'documentation.html', image: 'documentation_image.png'}
+- {title: 'Resources', file: 'resources.html', image: 'resources_image.png'} 
+- {title: 'Data', file: 'data_source.html', image: 'data_image.png'}
+
+homegriditems:
+- {title: 'Visualisations', file: 'visualisations.html', mintitle: 'For Exploration', prose: 'Place to explore platform data of CLIx piroject.'}
+- {title: 'Documentation', file: 'documentation.html', mintitle: 'For Detailed Understanding', prose: 'Comprehensive documentation of the methodology.'}
+- {title : 'Data', file: 'data_source.html', mintitle: 'Underlying Data Sources', prose: 'Datasets which form the basis of different visualisations.'}
+- {title : 'Resources', file: 'resources.html', mintitle: 'Reproducible Research', prose: 'Interesting resources for reproducing our analysis.'}
+
+jsarr:
+- {name : 'slideshow_script', file: 'slide_java.js'}
+
+# Available social icons are powered by Font Awesome, so you can use any icon that they offer
