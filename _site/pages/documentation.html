@@ -118,6 +118,14 @@
 			  In a given school (in a particular machine), seperate json file is generated for each tool. 
 			  This json file will have logs of all the users of the tool on that machine.
                        </p>
+                       <h4>Important Note:</h4>
+		       <p> One specific aspect of project implementation is that not all students who are using the platform are registered. These non-registered 
+		       users  correspond to anonymous users and are logged with common user_id(=0). So logs corresponding to anonymous user is 
+		       usually due to more than one student. In all these cases, we have left out anonymous user observations (as it is difficult to 
+		       infer student level activity). They actually correspond to substantial part of the total observations. We have a simple 
+		       methodology as of now to approximate number of users in anonymous user_id, but have deffered its implementation until we discuss this with 
+		       research and other teams.
+                       </p>
                        </div>
 		      <div class="section" id="data_processing1"> 
 			<h4>Data Processing:</h4>
