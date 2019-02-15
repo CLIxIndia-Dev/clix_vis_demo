@@ -1,4 +1,4 @@
-var margin = {top: 20, right: 20, bottom: 80, left: 40},
+var margin = {top: 20, right: 20, bottom: 100, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -70,7 +70,7 @@ d3.csv("{{site.github.url}}/data/tg_num_users_viz_top50.csv", function(error, da
          .attr("y", 0)
          .attr("x", 9)
          .attr("dy", ".35em")
-         .attr("transform", "rotate(90)")
+         .attr("transform", "rotate(70)")
          .style("text-anchor", "start");
 
   svg.append("text")
@@ -80,11 +80,18 @@ d3.csv("{{site.github.url}}/data/tg_num_users_viz_top50.csv", function(error, da
       .style("text-anchor", "middle")
       .text("Schools");
 
+  svg.append("text")
+      .attr("transform",
+            "translate(" + (width/30) + " ," +
+                           (height + margin.top + 70) + ")")
+      .style("text-anchor", "right")
+      .text("*Only logged-in and buddy users are included, anonymous users are not included");
+
   svg.append('text')
       .attr("x", 440)
       .attr("y",   30)
       .style("text-anchor", "middle")
-      .text("Average Number of Students Engaged with Tool in a Day (Jul, 2018 - Jan, 2019)")
+      .text("Average Number of Students* Engaged with Tool in a Day (Jul, 2018 - Jan, 2019)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
@@ -93,7 +100,7 @@ d3.csv("{{site.github.url}}/data/tg_num_users_viz_top50.csv", function(error, da
       .attr("x", 390)
       .attr("y",   60)
       .style("text-anchor", "middle")
-      .text("(for top 50 schools of Telangana)")
+      .text("(Telangana)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
