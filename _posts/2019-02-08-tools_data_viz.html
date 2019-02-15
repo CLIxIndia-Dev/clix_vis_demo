@@ -8,26 +8,49 @@ tags: [tools, visualisation]
 image:
       feature : visuals_ss.png	
 ---
- These visualisations are based on data generated due to interaction with tools section of the platform. They are mainly based on three metrics for each tool- total number of days accessed, average number of students in a day and average time spent by a student in a day.
+These visualisations are based on data generated due to interaction with tools section of the platform. They are mainly based on three metrics for each tool- total number of days accessed, average number of students in a day and average time spent by a student in a day.</br></br>
 
-<!--div>
-	{% for post in site.categories.visualstools %}
-	<a style = "text-decoration: none" href={{site.github}}{{post.url}}>
-		<figure>
-		 <img src = {{site.github.url}}/images/{{post.image.feature}} alt = "image" style="max-width:417px; max-height:172px">
-		 <figcaption>
-                      {{post.caption}}
-	         </figcaption>	 
-		</figure>
 
-        </a>
-  {% endfor %}
-  
-</div-->
-
+<h4> Total Number of Days Tool was Used in a School</h4> 
 <div>
 <ul>
-{% for post in site.categories.visualstools %}
+{% for post in site.categories.vis_tools_total_num_days %}
+  <li>
+     <a  href={{site.github.url}}{{post.url}}>
+		
+		 
+		
+     <a href={{site.github.url}}{{post.url}}>   {{post.caption}}	</a>
+	         
+
+     </a>
+  </li>
+  {% endfor %}
+</ul>
+</div>
+
+<h4> Total Number of Students Enganged in a School</h4>
+<div>
+<ul>
+{% for post in site.categories.vis_tools_total_students %}
+  <li>
+     <a  href={{site.github.url}}{{post.url}}>
+		
+		 
+		
+     <a href={{site.github.url}}{{post.url}}>   {{post.caption}}	</a>
+	         
+
+     </a>
+  </li>
+  {% endfor %}
+</ul>
+</div>
+
+<h4> Average Number of Students Engaged in a Day</h4>
+<div>
+<ul>
+{% for post in site.categories.vis_tools_avg_num_students%}
   <li>
      <a  href={{site.github.url}}{{post.url}}>
 		

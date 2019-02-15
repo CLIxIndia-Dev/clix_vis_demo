@@ -1,4 +1,3 @@
-
 var margin = {top: 20, right: 20, bottom: 80, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -37,7 +36,7 @@ var legendClicked; //to control legend selections
 var legendClassArray = []; //store legend classes to select bars in plotSingle()
 var y_orig; //to store original y-posn
 
-d3.csv("{{site.githu.url}}/data/ct_num_days_viz_top50.csv", function(error, data) {
+d3.csv("{{site.github.url}}/data/ct_num_days_viz_top50.csv", function(error, data) {
   if (error) throw error;
 
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "school_server_code"; }));
@@ -74,11 +73,18 @@ d3.csv("{{site.githu.url}}/data/ct_num_days_viz_top50.csv", function(error, data
          .attr("transform", "rotate(90)")
          .style("text-anchor", "start");
 
+  svg.append("text")
+      .attr("transform",
+            "translate(" + (width/2) + " ," +
+                           (height + margin.top + 60) + ")")
+      .style("text-anchor", "middle")
+      .text("Schools");
+
   svg.append('text')
       .attr("x", 390)
       .attr("y",   50)
       .style("text-anchor", "middle")
-      .text("Total Number of Days Accessed during Jul, 2018 - Jan, 2019")
+      .text("Total Number of Days Tool was used in a School (Jul, 2018 - Jan, 2019)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
@@ -98,8 +104,13 @@ d3.csv("{{site.githu.url}}/data/ct_num_days_viz_top50.csv", function(error, data
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end");
-      //.text("Population");
-
+svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Number of Days");
   var state = svg.selectAll(".state")
       .data(data)
     .enter().append("g")
@@ -293,4 +304,3 @@ d3.csv("{{site.githu.url}}/data/ct_num_days_viz_top50.csv", function(error, data
   }
 
 });
-

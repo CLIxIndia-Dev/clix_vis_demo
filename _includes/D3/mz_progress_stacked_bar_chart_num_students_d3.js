@@ -1,4 +1,3 @@
-
 var margin = {top: 20, right: 20, bottom: 80, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -75,11 +74,19 @@ d3.csv("{{site.github.url}}/data/mz_progress_num_users_viz_top50.csv", function(
          .attr("transform", "rotate(90)")
          .style("text-anchor", "start");
 
+  svg.append("text")
+      .attr("transform",
+            "translate(" + (width/2) + " ," +
+                           (height + margin.top + 60) + ")")
+      .style("text-anchor", "middle")
+      .text("Schools");
+
+
   svg.append('text')
       .attr("x", 390)
       .attr("y",   50)
       .style("text-anchor", "middle")
-      .text("Total Number of Students Accessed during Jul, 2018 - Dec, 2018")
+      .text("Total Number of Students Engaged with Module (Jul, 2018 - Dec, 2018)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
@@ -100,6 +107,14 @@ d3.csv("{{site.github.url}}/data/mz_progress_num_users_viz_top50.csv", function(
       .attr("dy", ".71em")
       .style("text-anchor", "end");
       //.text("Population");
+
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Number of Students");
 
   var state = svg.selectAll(".state")
       .data(data)
@@ -294,4 +309,3 @@ d3.csv("{{site.github.url}}/data/mz_progress_num_users_viz_top50.csv", function(
   }
 
 });
-

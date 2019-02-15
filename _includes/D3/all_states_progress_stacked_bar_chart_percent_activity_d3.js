@@ -73,12 +73,18 @@ d3.csv("{{site.github.url}}/data/all_states_percent_activity_viz_top50.csv", fun
          .attr("dy", ".35em")
          .attr("transform", "rotate(90)")
          .style("text-anchor", "start");
+svg.append("text")
+      .attr("transform",
+            "translate(" + (width/2) + " ," +
+                           (height + margin.top + 60) + ")")
+      .style("text-anchor", "middle")
+      .text("Schools");
 
   svg.append('text')
       .attr("x", 390)
       .attr("y",   50)
       .style("text-anchor", "middle")
-      .text("Average Percentage of Activity Visited (Jul, 2018 - Dec, 2018)")
+      .text("Average Percentage of Activities Visited in a Module (Jul, 2018 - Dec, 2018)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
@@ -99,6 +105,15 @@ d3.csv("{{site.github.url}}/data/all_states_percent_activity_viz_top50.csv", fun
       .attr("dy", ".71em")
       .style("text-anchor", "end");
       //.text("Population");
+
+svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Percentage of Activities");
+
 
   var state = svg.selectAll(".state")
       .data(data)
@@ -293,4 +308,3 @@ d3.csv("{{site.github.url}}/data/all_states_percent_activity_viz_top50.csv", fun
   }
 
 });
-

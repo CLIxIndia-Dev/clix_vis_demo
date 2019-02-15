@@ -1,4 +1,3 @@
-
 var margin = {top: 20, right: 20, bottom: 80, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -74,11 +73,18 @@ d3.csv("{{site.github.url}}/data/all_states_num_days_viz_top50.csv", function(er
          .attr("transform", "rotate(90)")
          .style("text-anchor", "start");
 
+  svg.append("text")
+      .attr("transform",
+            "translate(" + (width/2) + " ," +
+                           (height + margin.top + 60) + ")")
+      .style("text-anchor", "middle")
+      .text("Schools");
+
   svg.append('text')
       .attr("x", 390)
       .attr("y",   50)
       .style("text-anchor", "middle")
-      .text("Total Number of Days Accessed during Jul, 2018 - Jan, 2019")
+      .text("Total Number of Days Tool was used in a School (Jul, 2018 - Jan, 2019)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
@@ -86,7 +92,7 @@ d3.csv("{{site.github.url}}/data/all_states_num_days_viz_top50.csv", function(er
       .attr("x", 390)
       .attr("y",   80)
       .style("text-anchor", "middle")
-      .text("All States")
+      .text("(for top 50 schools across all four states)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
@@ -98,8 +104,14 @@ d3.csv("{{site.github.url}}/data/all_states_num_days_viz_top50.csv", function(er
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end");
-      //.text("Population");
 
+svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Number of Days");
   var state = svg.selectAll(".state")
       .data(data)
     .enter().append("g")
@@ -263,6 +275,7 @@ d3.csv("{{site.github.url}}/data/all_states_num_days_viz_top50.csv", function(er
           .style("opacity", 0);
       }
     }
+
     //lower the bars to start on x-axis
     y_orig = [];
     state.selectAll("rect").forEach(function (d, i) {
@@ -292,4 +305,3 @@ d3.csv("{{site.github.url}}/data/all_states_num_days_viz_top50.csv", function(er
   }
 
 });
-

@@ -1,0 +1,154 @@
+"Sno","server_id","module_name","Generated_on","avg_percentage_activities_visited","total_comments_by_all_users","number_of_students"
+0,"ct1","[u'Atomic Structure']","29 November 2018",24.4897959183673,0,43
+1,"ct1","[u'Basic Astronomy']","29 November 2018",42.047619047619,0,30
+2,"ct1","[u'Ecosystem']","29 November 2018",3.84615384615385,0,1
+3,"ct1","[u'English Beginner']","29 November 2018",14.5383348651961,16,48
+4,"ct1","[u'English Elementary']","29 November 2018",9.52550535883869,12,27
+5,"ct1","[u'Geometric Reasoning Part I']","29 November 2018",16.4148351648352,0,26
+6,"ct1","[u'Health and Disease']","29 November 2018",14.3048128342246,0,11
+7,"ct1","[u'Linear Equations']","29 November 2018",82.5396825396826,1,9
+8,"ct1","[u'Pre-CLIx Survey']","29 November 2018",59.0740740740741,0,27
+9,"ct1","[u'Proportional Reasoning']","29 November 2018",29.5615013006317,13,18
+10,"ct1","[u'Reflecting on Values']","29 November 2018",0,0,2
+11,"ct1","[u'Sound']","29 November 2018",3.57142857142857,0,1
+12,"ct1","[u'Understanding Motion']","29 November 2018",3.76811594202899,0,5
+13,"ct11","[u'English Beginner']","02 November 2018",36.6804534313726,106,48
+14,"ct11","[u'English Elementary']","02 November 2018",0,0,1
+15,"ct13","[u'Atomic Structure']","02 November 2018",6.12244897959184,0,4
+16,"ct13","[u'Basic Astronomy']","02 November 2018",6.11111111111111,0,4
+17,"ct13","[u'Geometric Reasoning Part I']","02 November 2018",19.2722974699719,0,13
+18,"ct13","[u'Geometric Reasoning Part II']","02 November 2018",6.72268907563025,0,7
+19,"ct13","[u'Linear Equations']","02 November 2018",28.5714285714286,0,1
+20,"ct13","[u'Reflecting on Values']","02 November 2018",0,0,1
+21,"ct13","[u'Understanding Motion']","02 November 2018",1.44927536231884,0,1
+22,"ct14","[u'Atomic Structure']","17 November 2018",46.7532467532468,0,33
+23,"ct14","[u'Basic Astronomy']","29 November 2018",7.14285714285714,0,1
+24,"ct14","[u'Ecosystem']","29 November 2018",0,0,1
+25,"ct14","[u'English Beginner']","29 November 2018",23.90625,8,55
+26,"ct14","[u'English Elementary']","29 November 2018",9.51617826617826,0,12
+27,"ct14","[u'Geometric Reasoning Part I']","29 November 2018",45.9268424977965,1,49
+28,"ct14","[u'Geometric Reasoning Part II']","29 November 2018",10.5228758169935,0,5
+29,"ct14","[u'Health and Disease']","29 November 2018",44.1176470588235,0,9
+30,"ct14","[u'Linear Equations']","29 November 2018",0,0,1
+31,"ct14","[u'Pre-CLIx Survey']","29 November 2018",0,0,3
+32,"ct14","[u'Sound']","29 November 2018",30.8270676691729,0,19
+33,"ct14","[u'Understanding Motion']","29 November 2018",2.89855072463768,0,3
+34,"ct17","[u'Basic Astronomy']","27 November 2018",62.020202020202,0,11
+35,"ct17","[u'Ecosystem']","27 November 2018",30.7692307692308,0,8
+36,"ct17","[u'English Elementary']","28 November 2018",0,0,2
+37,"ct17","[u'Health and Disease']","27 November 2018",35.8288770053476,0,11
+38,"ct17","[u'Proportional Reasoning']","28 November 2018",8.69565217391304,0,1
+39,"ct17","[u'Sound']","27 November 2018",13.1696428571429,0,24
+40,"ct18","[u'English Beginner']","27 November 2018",15.8764567147614,0,53
+41,"ct18","[u'English Elementary']","27 November 2018",21.3624338624339,4,18
+42,"ct18","[u'Proportional Reasoning']","27 November 2018",15.8102766798419,0,11
+43,"ct18","[u'Understanding Motion']","27 November 2018",27.4703557312253,0,22
+44,"ct19","[u'English Beginner']","12 November 2018",0,0,1
+45,"ct19","[u'English Elementary']","12 November 2018",0,0,1
+46,"ct19","[u'Geometric Reasoning Part I']","12 November 2018",18.9399696048632,0,94
+47,"ct19","[u'Geometric Reasoning Part II']","12 November 2018",0,0,6
+48,"ct19","[u'Pre-CLIx Survey']","12 November 2018",0,0,1
+49,"ct19","[u'Sound']","12 November 2018",10.1190476190476,0,12
+50,"ct20","[u'Atomic Structure']","28 November 2018",1.36054421768707,0,3
+51,"ct20","[u'Basic Astronomy']","28 November 2018",20.4761904761905,0,4
+52,"ct20","[u'Ecosystem']","28 November 2018",1.92307692307692,0,1
+53,"ct20","[u'English Beginner']","28 November 2018",15.5007489106754,25,27
+54,"ct20","[u'English Elementary']","28 November 2018",3.17896389324961,0,7
+55,"ct20","[u'Geometric Reasoning Part I']","28 November 2018",16.2736234409891,0,61
+56,"ct20","[u'Geometric Reasoning Part II']","28 November 2018",1.57952069716776,0,9
+57,"ct20","[u'Health and Disease']","28 November 2018",4.41176470588235,0,1
+58,"ct20","[u'Pre-CLIx Survey']","28 November 2018",6.25,0,8
+59,"ct20","[u'Proportional Reasoning']","28 November 2018",2.17391304347826,0,2
+60,"ct20","[u'Reflecting on Values']","28 November 2018",1.21951219512195,0,1
+61,"ct20","[u'Sound']","28 November 2018",23.2142857142857,0,2
+62,"ct20","[u'Understanding Motion']","28 November 2018",0,0,2
+63,"ct22","[u'Atomic Structure']","30 November 2018",13.9591836734694,0,25
+64,"ct22","[u'Basic Astronomy']","30 November 2018",21.9614512471655,0,14
+65,"ct22","[u'Ecosystem']","30 November 2018",2.56410256410256,0,3
+66,"ct22","[u'English Beginner']","30 November 2018",9.65073529411765,0,16
+67,"ct22","[u'Geometric Reasoning Part I']","30 November 2018",18.2628849780013,0,74
+68,"ct22","[u'Geometric Reasoning Part II']","30 November 2018",2.35294117647059,0,10
+69,"ct22","[u'Health and Disease']","30 November 2018",3.05429864253394,0,13
+70,"ct22","[u'Linear Equations']","30 November 2018",19.047619047619,0,3
+71,"ct22","[u'Post-CLIx Survey']","30 November 2018",0,0,1
+72,"ct22","[u'Pre-CLIx Survey']","30 November 2018",7.14285714285714,0,7
+73,"ct22","[u'Proportional Reasoning']","30 November 2018",6.7287784679089,0,4
+74,"ct22","[u'Reflecting on Values']","30 November 2018",1.6260162601626,0,3
+75,"ct22","[u'Sound']","30 November 2018",1.78571428571429,0,1
+76,"ct22","[u'Understanding Motion']","30 November 2018",11.3421550094518,4,23
+77,"ct28","[u'English Beginner']","22 November 2018",4.7436683006536,2,18
+78,"ct28","[u'English Elementary']","22 November 2018",2.2108843537415,0,7
+79,"ct28","[u'Geometric Reasoning Part I']","22 November 2018",0,0,2
+80,"ct28","[u'Pre-CLIx Survey']","22 November 2018",5,0,3
+81,"ct28","[u'Proportional Reasoning']","22 November 2018",1.44927536231884,0,3
+82,"ct28","[u'Understanding Motion']","22 November 2018",3.38164251207729,0,3
+83,"ct3","[u'Geometric Reasoning Part I']","24 November 2018",12.5489236790607,0,73
+84,"ct3","[u'Geometric Reasoning Part II']","24 November 2018",0,0,2
+85,"ct3","[u'Health and Disease']","24 November 2018",0,0,1
+86,"ct31","[u'Basic Astronomy']","26 November 2018",10.2741702741703,0,11
+87,"ct31","[u'English Beginner']","26 November 2018",11.515231092437,0,14
+88,"ct31","[u'English Elementary']","26 November 2018",7.61904761904762,0,5
+89,"ct31","[u'Geometric Reasoning Part I']","26 November 2018",10.7142857142857,0,2
+90,"ct31","[u'Geometric Reasoning Part II']","26 November 2018",3.92156862745098,0,3
+91,"ct31","[u'Linear Equations']","16 November 2018",14.2857142857143,0,1
+92,"ct31","[u'Pre-CLIx Survey']","26 November 2018",0,0,1
+93,"ct31","[u'Proportional Reasoning']","26 November 2018",15.1775760471413,0,17
+94,"ct31","[u'Understanding Motion']","26 November 2018",18.8405797101449,0,2
+95,"ct33","[u'Atomic Structure']","01 November 2018",7.14285714285714,0,10
+96,"ct33","[u'Basic Astronomy']","01 November 2018",20.1904761904762,0,15
+97,"ct33","[u'Ecosystem']","01 November 2018",1.92307692307692,0,1
+98,"ct33","[u'English Beginner']","02 November 2018",5.95128676470588,0,32
+99,"ct33","[u'English Elementary']","02 November 2018",3.2312925170068,0,7
+100,"ct33","[u'Geometric Reasoning Part I']","01 November 2018",12.5,0,4
+101,"ct33","[u'Geometric Reasoning Part II']","01 November 2018",7.69230769230769,0,13
+102,"ct33","[u'Linear Equations']","01 November 2018",14.2857142857143,0,1
+103,"ct33","[u'Pre-CLIx Survey']","01 November 2018",0,0,1
+104,"ct33","[u'Proportional Reasoning']","01 November 2018",12.0427025055356,0,31
+105,"ct33","[u'Understanding Motion']","02 November 2018",1.44927536231884,0,1
+106,"ct34","[u'Atomic Structure']","16 November 2018",6.41399416909621,0,7
+107,"ct34","[u'Basic Astronomy']","16 November 2018",29.2526455026455,0,24
+108,"ct34","[u'Ecosystem']","16 November 2018",22.1153846153846,0,4
+109,"ct34","[u'English Beginner']","16 November 2018",20.5759803921569,0,30
+110,"ct34","[u'English Elementary']","16 November 2018",9.92757242757243,0,11
+111,"ct34","[u'Geometric Reasoning Part I']","16 November 2018",27.1915584415584,0,22
+112,"ct34","[u'Geometric Reasoning Part II']","16 November 2018",2.77777777777778,0,1
+113,"ct34","[u'Health and Disease']","16 November 2018",7.35294117647059,0,7
+114,"ct34","[u'Linear Equations']","16 November 2018",0,0,4
+115,"ct34","[u'Pre-CLIx Survey']","16 November 2018",0,0,3
+116,"ct34","[u'Proportional Reasoning']","16 November 2018",4.4857126092824,0,3
+117,"ct34","[u'Reflecting on Values']","16 November 2018",7.31707317073171,0,4
+118,"ct34","[u'Sound']","16 November 2018",6.96428571428571,0,10
+119,"ct34","[u'Understanding Motion']","16 November 2018",13.6008918617614,0,13
+120,"ct4","[u'Basic Astronomy']","30 November 2018",0,0,1
+121,"ct4","[u'English Beginner']","30 November 2018",29.7623119015048,174,86
+122,"ct4","[u'English Elementary']","30 November 2018",10.0999694749695,0,12
+123,"ct4","[u'Geometric Reasoning Part I']","30 November 2018",7.14285714285714,0,2
+124,"ct4","[u'Health and Disease']","28 November 2018",0,0,1
+125,"ct4","[u'Post-CLIx Survey']","28 November 2018",0,0,1
+126,"ct4","[u'Pre-CLIx Survey']","30 November 2018",2.5,0,4
+127,"ct4","[u'Understanding Motion']","30 November 2018",14.975845410628,0,3
+128,"ct6","[u'Atomic Structure']","30 November 2018",13.5568513119534,0,14
+129,"ct6","[u'Basic Astronomy']","30 November 2018",15.8874458874459,0,11
+130,"ct6","[u'Ecosystem']","30 November 2018",1.92307692307692,0,2
+131,"ct6","[u'English Beginner']","30 November 2018",19.840568438914,0,26
+132,"ct6","[u'English Elementary']","30 November 2018",11.9906135531136,0,16
+133,"ct6","[u'Geometric Reasoning Part I']","30 November 2018",30.7773109243697,0,17
+134,"ct6","[u'Geometric Reasoning Part II']","30 November 2018",5.88235294117647,0,2
+135,"ct6","[u'Health and Disease']","30 November 2018",1.89075630252101,0,7
+136,"ct6","[u'Pre-CLIx Survey']","30 November 2018",94.4736842105263,0,19
+137,"ct6","[u'Proportional Reasoning']","30 November 2018",6.95652173913044,0,5
+138,"ct6","[u'Sound']","30 November 2018",2.38095238095238,0,3
+139,"ct6","[u'Understanding Motion']","30 November 2018",5.2536231884058,0,16
+140,"ct7","[u'Atomic Structure']","15 November 2018",4.60491889063318,0,39
+141,"ct9","[u'Basic Astronomy']","16 November 2018",17.7777777777778,0,7
+142,"ct9","[u'English Beginner']","16 November 2018",0,0,2
+143,"ct9","[u'English Elementary']","16 November 2018",0,0,5
+144,"ct9","[u'Geometric Reasoning Part I']","16 November 2018",20.3956221876446,0,158
+145,"ct9","[u'Geometric Reasoning Part II']","16 November 2018",3.72549019607843,0,30
+146,"ct9","[u'Health and Disease']","16 November 2018",8.82352941176471,0,1
+147,"ct9","[u'Post-CLIx Survey']","16 November 2018",5,0,1
+148,"ct9","[u'Pre-CLIx Survey']","16 November 2018",90.9848484848485,0,66
+149,"ct9","[u'Proportional Reasoning']","16 November 2018",4.89130434782609,0,8
+150,"ct9","[u'Reflecting on Values']","16 November 2018",0,0,1
+151,"ct9","[u'Sound']","16 November 2018",4.16666666666667,0,3
+152,"ct9","[u'Understanding Motion']","16 November 2018",1.44927536231884,0,2

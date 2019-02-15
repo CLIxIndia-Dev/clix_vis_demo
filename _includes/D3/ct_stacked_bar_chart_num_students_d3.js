@@ -1,4 +1,3 @@
-
 var margin = {top: 20, right: 20, bottom: 80, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -74,18 +73,25 @@ d3.csv("{{site.github.url}}/data/ct_num_users_viz_top50.csv", function(error, da
          .attr("transform", "rotate(90)")
          .style("text-anchor", "start");
 
-  svg.append('text')
-      .attr("x", 390)
-      .attr("y",   50)
+  svg.append("text")
+      .attr("transform",
+            "translate(" + (width/2) + " ," +
+                           (height + margin.top + 60) + ")")
       .style("text-anchor", "middle")
-      .text("Average Number of Students in a Day (Jul, 2018 - Jan, 2019)")
+      .text("Schools");
+
+  svg.append('text')
+      .attr("x", 440)
+      .attr("y",   30)
+      .style("text-anchor", "middle")
+      .text("Average Number of Students Engaged with Tool in a Day (Jul, 2018 - Jan, 2019)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
 
   svg.append('text')
       .attr("x", 390)
-      .attr("y",   80)
+      .attr("y",   60)
       .style("text-anchor", "middle")
       .text("(for top 50 schools of Chhattisgarh)")
       .style("font-size", "18px")
@@ -100,6 +106,14 @@ d3.csv("{{site.github.url}}/data/ct_num_users_viz_top50.csv", function(error, da
       .attr("dy", ".71em")
       .style("text-anchor", "end");
       //.text("Population");
+
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Number of Students");
 
   var state = svg.selectAll(".state")
       .data(data)
@@ -294,4 +308,3 @@ d3.csv("{{site.github.url}}/data/ct_num_users_viz_top50.csv", function(error, da
   }
 
 });
-
