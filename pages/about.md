@@ -2,11 +2,16 @@
 layout: page
 title: About
 ---
+ 
+This alpha website provides access to Visializations of various datasets being generated from CLIxPlatform - a student learning platform - as part of Connected Learning Initiative (CLIx) project. 
 
- We are part of CLIx project, CIER, TISS, Mumbai. This website is created to give access to different platform datasets generated as part of implementation of CLIx project (basically, digital exhaust of students). Different teams across CLIx project can explore these datasets through visualizations provided on top 
-of raw datasets. Questions explored in these visualisations are due to interaction of tech team with other teams in terms of platform data requirements, particularly research team. 
+Different teams across CLIx project can explore these datasets through visualizations built on top of raw datasets. 
 
-  We have also collated different datasets and resources used for generating these visualisations. 
+Questions explored in these visualisations are outcome of collaborative exploration between CLIx technology team and leasdership, domain and research teams.
+
+This is just an alpha site (very initial glimpses) towards an aspirational meta-visualization dashboard.
+
+
 
 
 
