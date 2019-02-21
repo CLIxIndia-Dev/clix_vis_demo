@@ -7,15 +7,13 @@ This website theme is free and open source. We would like to acknowledge followi
 
 If you are having any problems, any questions or suggestions, feel free to contact us at below:
 
-CONTACT DETAILS
+durga.garapati@tiss.edu
+
+parthasarathi.edupally@tiss.edu
 
 sadaqat.mulla@tiss.edu
 
 satej.shende@tiss.edu
-
-parthasarathi.edupally@tiss.edu
-
-durga.garapati@tiss.edu
 
 shwetha.srinivasan@tiss.edu
 
