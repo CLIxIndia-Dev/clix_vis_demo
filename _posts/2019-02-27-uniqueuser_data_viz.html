@@ -1,0 +1,30 @@
+---
+layout: projectpages
+title: "Unique User Metrics Data Visualisation"
+author: "shwetha"
+categories: visualisationtype
+caption: Explore data related to unique user metrics
+tags: [uniqeusermetrics, visualisation]
+image:
+      feature : uniqueuser.png	
+---
+These visualisations are based on data generated due to interaction with course module section of the platform. They are mainly based on two metrics for each module- total number of students used a module and average percentage of activities visited in a module.</br></br>
+
+<h4> Unique User information</h4> 
+<div>
+<ul>
+{% for post in site.categories.uniqueuser %}
+  <li>
+     <a  href={{site.github.url}}{{post.url}}>
+		
+		 
+		
+     <a href={{site.github.url}}{{post.url}}>   {{post.caption}}	</a>
+	         
+
+     </a>
+  </li>
+  {% endfor %}
+</ul>
+</div>
+
