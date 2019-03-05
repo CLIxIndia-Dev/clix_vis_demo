@@ -1,0 +1,31 @@
+---
+layout: projectpages
+title: "Unique User Metrics Data Visualisation"
+author: "shwetha"
+categories: visualisationtype
+caption: Explore data related to unique user metrics
+tags: [uniqeusermetrics, visualisation]
+image:
+      feature : uniqueuser.png	
+---
+Description: These visuals orchestrate the data generated from learners’ interaction with the CLIxPlatform in the school ICT lab.<br><br>
+Data source: Collated progress CSV triangulated with collated tools data. <br><br>
+
+<h4> CLIxPlatform engagement metrics (Unique User information)</h4> 
+<div>
+<ul>
+{% for post in site.categories.uniqueuser %}
+  <li>
+     <a  href={{site.github.url}}{{post.url}}>
+		
+		 
+		
+     <a href={{site.github.url}}{{post.url}}>   {{post.caption}}	</a>
+	         
+
+     </a>
+  </li>
+  {% endfor %}
+</ul>
+</div>
+

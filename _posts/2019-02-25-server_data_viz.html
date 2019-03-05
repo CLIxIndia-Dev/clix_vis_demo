@@ -1,0 +1,30 @@
+---
+layout: projectpages
+title: "Server Metrics Data Visualisation"
+author: "shwetha"
+categories: visualisationtype
+caption: Explore data related to server metrics
+tags: [servermetrics, visualisation]
+image:
+      feature : newplot.png	
+---
+Description: These visuals orchestrate the data generated from CLIx server logs (system heartbeat) in the school ICT lab.  </br></br>
+Data source: From system heartbeat<br><br>
+<h4>Server usage metrics</h4> 
+<div>
+<ul>
+{% for post in site.categories.vis_server %}
+  <li>
+     <a  href={{site.github.url}}{{post.url}}>
+		
+		 
+		
+     <a href={{site.github.url}}{{post.url}}>   {{post.caption}}	</a>
+	         
+
+     </a>
+  </li>
+  {% endfor %}
+</ul>
+</div>
+
