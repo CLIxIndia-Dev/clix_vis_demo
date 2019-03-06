@@ -89,7 +89,7 @@ d3.csv("{{site.github.url}}/data/all_states_progress_num_users_viz_top50.csv", f
       .text("*Only logged-in and buddy users are included, anonymous users are not included");
 
   svg.append('text')
-      .attr("x", 390)
+      .attr("x", 395)
       .attr("y",   50)
       .style("text-anchor", "middle")
       .text("Total Number of Students* Engaged with Module (Jul, 2018 - Dec, 2018)")
