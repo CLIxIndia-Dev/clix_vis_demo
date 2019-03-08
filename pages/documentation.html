@@ -149,34 +149,34 @@ title:
 		          <p>This corresponds to total number of days tools section was accessed (irrespective of the time spent) by students. 
 		           In a given school, for each tool, we add up all unique date entries (a date entry corresponds to atleast one student accessing tool). 
 			   This sum gives us the total number of unique days a tool was accessed by students during the observation period.</p>
-                       <h5>Average Number of Students Engaged in a Day</h5>
-		          <h6> How many students are engaging with a particular tool in a given school on an average? </h6> 
-		          <p>This gives us the number of students accessing a particular tool in a day on an average. In a given school, for each 
-		          tool and for each date, we add up number of unique user_id's to get number of students. Then this number is averaged across 
-			  observation period. Please note that for each tool averaging is done considering only dates on which it was used, so time period 
-			  across which we are averaging could be different for different tools.</p>
+                       <h5>Number of Students Engaging with different Tools per Day</h5>
+		          <h6> How many students engaged with different tools per day? </h6> 
+		          <p>In a given school, number of unique users in a day is calculated for each tool. This number is averaged across all days for every tool
+			  across the observation period. Please note that for each tool averaging is done considering only dates on which it was used, so time period 
+			  across which we are averaging could be different for different tools. So we cannot add-up the tool averages in a school to comment on 
+			  average number of students in a day.</p>
                        <h5>Total Number of Students Engaged in a School </h5>
 		          <h6> How many students in total were engaged with a particular tool in a given school? </h6> 
 		          <p>This is the aggregate number of unique students engaged with each tool of the platform. In a given school, for each 
 		          tool, we add up number of unique user_id's (during the whole period of observation) to get number of students. 
 			  Summed up number on y-axis can be interpreted as total number of unique students engaged with the tools for the corresponding school.</p>
-
-		<!--	  
-                       <h5>Average Time Spent by a Student in a Day</h5>
-		         <h6> How long did students of a particular school use a tool in a day on an average? </h6> 
-		         <p>In a given school, for each tool and for each unique user, total time spent on a day is calculated. This number is averaged 
-			 across all days for which observations are available. This gives us the average time spent (averaged across students and days) 
-			 for each tool. Again here also please note that for each tool averaging is done considering only dates on which it was used (which 
-			 could be different for different tools), so time period across which we are averaging could be different for different tools. </p>
-                       <h5>Average Attendance for Tools</h5>
+ 
+                       <h5>Time Spent by students on different tools per day</h5>
+		         <h6> How much time did all students spend with different tools per day? </h6> 
+		         <p>In a given school, time spent in a day by all students on each tool is calculated (only for days on which students logged 
+			 into that particular tool). This number for each tool is averaged across observation period. Please note that days across 
+			 which each tool's time spent is being averaged could be different, so cannot add-up the tool numbers in a school to 
+			 talk about total time spent in a day. </p>
+                   <!--    
+			 <h5>Average Attendance for Tools</h5>
 		         <h6> How many students used a tool out of total students in a particular day on an average? </h6>
 		         <p>In a given school, for each day, attendance (as a subset of total students present on that day) for each tool is 
 			 calculated. This number is averaged across all dates for which observations are avilable. This gives us the average number of students using a 
 			 tool out of all the students present on a particular day. Here averaging is done considering same dates for 
 			 all tools in a given school.</p>
-		-->	 
-
+                   --> 
                       </p>
+
 		    </div></br> 
 
 </section>

@@ -78,7 +78,7 @@
 
 <div class = "project-grid-view">
  <p >
-This number gives the average number of students engaged with tool in a day. It can be used to compare number of students using different tools and we cannot deduce anything from summed up numbers.&nbsp;<a href="/pages/documentation.html#calculation-metrics1">calculations</a>
+In a given school, number of students engaged with different tools in a day is calculated. This number for each tool is averaged over observation period. Chart should be used to compare number of students engaged with different tools in a school, but not to deduce total students using all tools in a day (cannot add up number of students along y-axis).&nbsp;<a href="/pages/documentation.html#calculation-metrics1">calculations</a>
 </p>
 <!--helped by: http://bl.ocks.org/yuuniverse4444/8325617-->
 <meta charset="utf-8">
@@ -218,7 +218,7 @@ d3.csv("/data/ct_num_users_viz_top50.csv", function(error, data) {
       .attr("x", 440)
       .attr("y",   30)
       .style("text-anchor", "middle")
-      .text("Average Number of Students* Engaged with Tool in a Day (Jul, 2018 - Jan, 2019)")
+      .text("Number of Students* Engaged with each Tool per day (Jul, 2018 - Jan, 2019)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
@@ -231,14 +231,14 @@ d3.csv("/data/ct_num_users_viz_top50.csv", function(error, data) {
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end");
+  //svg.append("g")
+  //    .attr("class", "y axis")
+  //    .call(yAxis)
+  //  .append("text")
+  //    .attr("transform", "rotate(-90)")
+  //    .attr("y", 6)
+  //    .attr("dy", ".71em")
+  //    .style("text-anchor", "end");
       //.text("Population");
 
   svg.append("text")

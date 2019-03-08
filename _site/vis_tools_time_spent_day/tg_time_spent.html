@@ -78,7 +78,7 @@
 
 <div class = "project-grid-view">
  <p >
-In a given school, total time spent on tools section by all students in a day is calculated. Colors correspond to different tools and total time spent is averaged across days.&nbsp;<a href="/pages/documentation.html#calculation-metrics1">calculations</a>
+In a given school, time spent by all students on each tool in a day is calculated. This number for each tool is averaged over observation period. Chart should be used to compare time spent on different tools in a school, but not the total time spent in a day (cannot add up time spent along y-axis).&nbsp;<a href="/pages/documentation.html#calculation-metrics1">calculations</a>
 </p>
 <!--helped by: http://bl.ocks.org/yuuniverse4444/8325617-->
 <meta charset="utf-8">
@@ -218,27 +218,27 @@ d3.csv("/data/tg_time_spent_viz_top50.csv", function(error, data) {
       .attr("x", 440)
       .attr("y",   30)
       .style("text-anchor", "middle")
-      .text("Total Time Spent* by Students in a Day on Tools (Jul, 2018 - Jan, 2019)")
+      .text("Time Spent* by Students on each Tool per day (Jul, 2018 - Jan, 2019)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
 
-  //svg.append('text')
-  //    .attr("x", 390)
-  //    .attr("y",   60)
-  //    .style("text-anchor", "middle")
-  //    .text("(for top 50 schools across all four states)")
-  //    .style("font-size", "18px")
-  //    .style("fill", 'darkblue')
+  svg.append('text')
+      .attr("x", 390)
+      .attr("y",   60)
+      .style("text-anchor", "middle")
+      .text("(Telangana)")
+      .style("font-size", "18px")
+      .style("fill", 'darkblue')
 
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end");
+ // svg.append("g")
+ //     .attr("class", "y axis")
+ //     .call(yAxis)
+ //   .append("text")
+ //     .attr("transform", "rotate(-90)")
+ //     .attr("y", 6)
+ //     .attr("dy", ".71em")
+ //     .style("text-anchor", "end");
       //.text("Population");
 
   svg.append("text")
