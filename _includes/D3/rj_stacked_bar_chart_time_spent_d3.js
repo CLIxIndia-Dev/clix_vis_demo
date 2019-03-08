@@ -36,7 +36,7 @@ var legendClicked; //to control legend selections
 var legendClassArray = []; //store legend classes to select bars in plotSingle()
 var y_orig; //to store original y-posn
 
-d3.csv("/data/rj_time_spent_viz_top50.csv", function(error, data) {
+d3.csv("{{site.github.url}}/data/rj_time_spent_viz_top50.csv", function(error, data) {
   if (error) throw error;
 
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "school_server_code"; }));
