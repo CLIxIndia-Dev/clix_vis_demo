@@ -91,7 +91,7 @@ d3.csv("{{site.github.url}}/data/mz_num_users_viz_top50.csv", function(error, da
       .attr("x", 440)
       .attr("y",   30)
       .style("text-anchor", "middle")
-      .text("Average Number of Students* Engaged with Tool in a Day (Jul, 2018 - Jan, 2019)")
+      .text("Number of Students* Engaged with each Tool per day (Jul, 2018 - Jan, 2019)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
@@ -104,14 +104,14 @@ d3.csv("{{site.github.url}}/data/mz_num_users_viz_top50.csv", function(error, da
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end");
+  //svg.append("g")
+  //    .attr("class", "y axis")
+  //    .call(yAxis)
+  //  .append("text")
+  //    .attr("transform", "rotate(-90)")
+ //     .attr("y", 6)
+ //     .attr("dy", ".71em")
+ //     .style("text-anchor", "end");
       //.text("Population");
 
   svg.append("text")

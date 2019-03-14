@@ -92,7 +92,7 @@ d3.csv("{{site.github.url}}/data/all_states_time_spent_viz_top50.csv", function(
       .attr("x", 440)
       .attr("y",   30)
       .style("text-anchor", "middle")
-      .text("Total Time Spent* by Students in a Day on Tools (Jul, 2018 - Jan, 2019)")
+      .text("Time Spent* by Students on each Tool per day (Jul, 2018 - Jan, 2019)")
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
@@ -105,14 +105,14 @@ d3.csv("{{site.github.url}}/data/all_states_time_spent_viz_top50.csv", function(
       .style("font-size", "18px")
       .style("fill", 'darkblue')
 
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end");
+//  svg.append("g")
+//      .attr("class", "y axis")
+//      .call(yAxis)
+//    .append("text")
+//      .attr("transform", "rotate(-90)")
+//     .attr("y", 6)
+//      .attr("dy", ".71em")
+//      .style("text-anchor", "end");
       //.text("Population");
 
   svg.append("text")
