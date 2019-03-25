@@ -138,7 +138,7 @@ svg.append("text")
         if(d.y0 == 5 && d.y == 10){
          tooltip.select('.tempRange').html('No Tool Usage');
         }
-        else {tooltip.select('.tempRange').html((d.y0) + " to " + (d.y));}
+        else {tooltip.select('.tempRange').html(d.y0 + " min" + " to " + d.y + " min");}
 
         tooltip.style('display', 'block');
         tooltip.style('opacity',2);
@@ -322,7 +322,7 @@ svg.append("text")
         if(d.y0 == 5 && d.y == 10){
          tooltip.select('.tempRange').html('No Tool Usage');
         }
-        else {tooltip.select('.tempRange').html((d.y0) + " to " + (d.y));}
+        else {tooltip.select('.tempRange').html(d.y0 + " min" + " to " + d.y + " min");}
 
         tooltip.style('display', 'block');
         tooltip.style('opacity',2);
