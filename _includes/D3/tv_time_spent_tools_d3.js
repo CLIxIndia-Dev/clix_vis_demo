@@ -93,7 +93,7 @@ svg.append("text")
         .attr("y", 14)
         .attr("dx", ".71em")
         .attr("dy", "-.71em")
-        .text("(All states)");
+        .text("(All states - 112 schools)");
 
 
     // add legend
@@ -138,7 +138,7 @@ svg.append("text")
         if(d.y0 == 5 && d.y == 10){
          tooltip.select('.tempRange').html('No Tool Usage');
         }
-        else {tooltip.select('.tempRange').html((d.y0) + " to " + (d.y));}
+        else {tooltip.select('.tempRange').html(d.y0 + " min" + " to " + d.y + " min");}
 
         tooltip.style('display', 'block');
         tooltip.style('opacity',2);
@@ -161,17 +161,23 @@ svg.append("text")
 					var date = this.getAttribute("value");
 
 					var str;
+					var num_schools;
 					if(date == "Chhattisgarh"){
 						str = "{{site.github.url}}/data/ct_time_tool_tv.json";
+						num_schools = 23;
 					}else if(date == "Rajasthan"){
 						str = "{{site.github.url}}/data/rj_time_tool_tv.json";
+						num_schools = 54;
 					}else if(date == "Mizoram"){
 						str = "{{site.github.url}}/data/mz_time_tool_tv.json";
+						num_schools = 11;
 					}else if(date == "Telangana"){
 						str = "{{site.github.url}}/data/tg_time_tool_tv.json";
+						num_schools = 24;
 					}else{
 					//All states top 50 schools
 						str = "{{site.github.url}}/data/cumul_time_tool_tv.json";
+						num_schools = 112;
 					}
 
  // var stack = d3.layout.stack();
@@ -271,7 +277,7 @@ svg.append("text")
         .attr("y", 14)
         .attr("dx", ".71em")
         .attr("dy", "-.71em")
-        .text("(" + date + ")");
+        .text("(" + date + " - " + num_schools+ ")");
 
       svg.append("text")
         .attr("x", width/30)
@@ -322,7 +328,7 @@ svg.append("text")
         if(d.y0 == 5 && d.y == 10){
          tooltip.select('.tempRange').html('No Tool Usage');
         }
-        else {tooltip.select('.tempRange').html((d.y0) + " to " + (d.y));}
+        else {tooltip.select('.tempRange').html(d.y0 + " min" + " to " + d.y + " min");}
 
         tooltip.style('display', 'block');
         tooltip.style('opacity',2);
