@@ -83,5 +83,20 @@ These visualisations are based on data generated due to interaction with tools s
 </ul>
 </div>
 
+<h4> Monthly Variation of Time Spent by Students in a Day on different Tools</h4>
+<div>
+<ul>
+{% for post in site.categories.vis_tv_tools_time_spent%}
+  <li>
+     <a  href={{site.github.url}}{{post.url}}>
+		
+		 
+		
+     <a href={{site.github.url}}{{post.url}}>   {{post.caption}}	</a>
+	         
 
-
+     </a>
+  </li>
+  {% endfor %}
+</ul>
+</div>
