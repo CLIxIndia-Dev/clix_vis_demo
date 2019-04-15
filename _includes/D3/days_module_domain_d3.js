@@ -192,9 +192,9 @@ svg.append("text")
     yGroupMax = d3.max(dataset["layers"], function(layer) { return d3.max(layer, function(d) { return d.y1; }); });
     yGroupMin = d3.min(dataset["layers"], function(layer) { return d3.min(layer, function(d) { return d.y0; }); });
 
-    //var margin = {top: 50, right: 50, bottom: 50, left: 120},
-    //    width = 960 - margin.left - margin.right,
-    //    height = 500 - margin.top - margin.bottom;
+    var margin = {top: 50, right: 50, bottom: 50, left: 120},
+        width = 960 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
 
     //var x = d3.scale.ordinal()
     //    .domain(dataset["categories"])

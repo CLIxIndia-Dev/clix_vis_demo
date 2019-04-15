@@ -428,7 +428,7 @@ svg.append("text")
       .attr("x", 390)
      .attr("y",   50)
       .style("text-anchor", "middle")
-      .text("Lab Functionality in" + ' ' + state_code + ' ' + "(Jul, 2018 - Mar, 2019)")
+      .text("Lab Functionality in" + ' ' + state_code + ' ' + "(July, 2018 - Aug, 2018)")
       .style("font-size", "18px")
       .style("fill", 'black')
 

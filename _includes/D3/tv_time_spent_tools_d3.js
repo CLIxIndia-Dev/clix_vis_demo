@@ -206,9 +206,9 @@ svg.append("text")
     //    .domain(dataset["categories"])
     //    .rangeRoundBands([0, width], .08);
 
-    //var y = d3.scale.linear()
-    //    .domain([yGroupMin, yGroupMax])
-    //    .range([height, 0]);
+    var y = d3.scale.linear()
+        .domain([yGroupMin, yGroupMax])
+        .range([height, 0]);
     //console.log(yGroupMin)
     //console.log(yGroupMax)
     var xAxis = d3.svg.axis()
