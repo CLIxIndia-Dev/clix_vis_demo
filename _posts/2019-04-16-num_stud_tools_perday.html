@@ -2,17 +2,19 @@
 layout: projectpages
 title: ""
 author: "partha"
-categories: vis_tv_stud_tools_domain
-caption: Monthly variation of number of students using tools
-tags: [tools, time spent]
+categories: vis_tools_avg_num_students
+caption: Number of Students using tools per day
+tags: [tools, total number of students]
 image:
       feature : visuals_ss.png
 ---
 
 <p >
-These graphs show the monthly variation of number of students using different domain-tools across all schools. In a given month, number of students using different domain-tools is calculated for each school. Minimum and maximum of these numbers across all the schools of a given state as calculated monthly.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
+These visuals indicate number of students engaged with different tools in a typical day. In a given school, number of students engaged with different tools in a day is calculated. This number for each tool is averaged over observation period. Chart should be used to compare number of students engaged with different tools in a typical day, but not to deduce total number of students using tools in a day by adding up numbers on y-axis. Only logged-in users are considered, anonymous users are counted as only one student.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
 </p>
+
 <meta charset="utf-8">
+
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="{{site.github.url}}/data/style.css"/>
@@ -21,7 +23,9 @@ These graphs show the monthly variation of number of students using different do
 </script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
 <style scoped>
+
 p{
 text-align: centre;
 margin: 10px 0;
@@ -62,15 +66,15 @@ font-size: larger;
   stroke: #000;
 }
 
-
 .legend {
 	       padding: 5px;
 	       font: 10px sans-serif;
 	       background: yellow;
 	       box-shadow: 2px 2px 1px #888;
 	    }
-</style>
-</head>
+   </style>
+ </head>
+
 <div>
 
 <div class="btn-group pull-left">
@@ -90,10 +94,8 @@ font-size: larger;
 
 <div id="chart1" class="chart"></div>
 
-</body>
-
 <script type="text/javascript">
-	{% include D3/stud_tool_domain_d3.js %}
+	{% include D3/tools_num_stud_perday_d3.js%}
 </script>
 
 

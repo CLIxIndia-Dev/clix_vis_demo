@@ -2,15 +2,15 @@
 layout: projectpages
 title: ""
 author: "partha"
-categories: vis_sv_lab_func
-caption: SnapShot View of Lab Functionality
-tags: [tools, time spent]
+categories: vis_progress_num_students
+caption: Number of Students Accessing different Modules
+tags: [Modules, total number of students]
 image:
       feature : visuals_ss.png
 ---
 
 <p >
-These visuals give a snapshot view of lab functionality for different schools.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
+These graphs indicate number of students enganged with different modules in a school. As same student might be engaging with more than one module, chart should be used to compare number of students engaged with different modules. We cannot deduce total number of students by adding up numbers on y-axis. Both logged-in and buddy users are considered for calculations.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
 </p>
 
 <meta charset="utf-8">
@@ -24,7 +24,7 @@ These visuals give a snapshot view of lab functionality for different schools.&n
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-	<style scoped>
+<style scoped>
 
 p{
 text-align: centre;
@@ -95,7 +95,7 @@ font-size: larger;
 <div id="chart1" class="chart"></div>
 
 <script type="text/javascript">
-	{% include D3/sv_lab_func_d3.js%}
+	{% include D3/modules_num_stud_d3.js%}
 </script>
 
 

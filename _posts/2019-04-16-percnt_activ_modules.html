@@ -2,17 +2,19 @@
 layout: projectpages
 title: ""
 author: "partha"
-categories: vis_tv_days_module_domain
-caption: Monthly variation of number of days using modules
-tags: [tools, time spent]
+categories: vis_progress_avgactivity
+caption: Average Percentage of Activities visited in different Modules
+tags: [Modules, percentage of activities visited]
 image:
       feature : visuals_ss.png
 ---
 
 <p >
-These graphs show the monthly variation of number of days different domain-modules are used by students across all schools. In a given month, number of days different domain-modules are used is calculated for each school. Minimum and maximum of these numbers across all the schools of a given state as calculated monthly.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
+These visuals indicate average percentage of activities visited by students in different modules. Summing up of numbers along y-axis dont make any sense. Both logged-in and buddy users are considered for calculations.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
 </p>
+
 <meta charset="utf-8">
+
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="{{site.github.url}}/data/style.css"/>
@@ -21,7 +23,9 @@ These graphs show the monthly variation of number of days different domain-modul
 </script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
 <style scoped>
+
 p{
 text-align: centre;
 margin: 10px 0;
@@ -62,15 +66,15 @@ font-size: larger;
   stroke: #000;
 }
 
-
 .legend {
 	       padding: 5px;
 	       font: 10px sans-serif;
 	       background: yellow;
 	       box-shadow: 2px 2px 1px #888;
 	    }
-</style>
-</head>
+   </style>
+ </head>
+
 <div>
 
 <div class="btn-group pull-left">
@@ -90,10 +94,8 @@ font-size: larger;
 
 <div id="chart1" class="chart"></div>
 
-</body>
-
 <script type="text/javascript">
-	{% include D3/days_module_domain_d3.js %}
+	{% include D3/modules_percnt_activ_d3.js%}
 </script>
 
 

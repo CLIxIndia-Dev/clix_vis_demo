@@ -2,17 +2,19 @@
 layout: projectpages
 title: ""
 author: "partha"
-categories: vis_tv_percn_activ_module
-caption: Monthly variation of number of students visiting 50% of activities
-tags: [tools, time spent]
+categories: vis_tools_total_num_days
+caption: Number of days of Tools Usage
+tags: [tools, total number of days]
 image:
       feature : visuals_ss.png
 ---
 
 <p >
-These graphs show the monthly variation of range of values of 'number of students who visited atleast 50% of the activities of modules' across all schools in a state.  In a given month, number of students visiting atleast 50% of the module activities is calculated for all schools. Minimum and maximum of these school level numbers are plotted every month.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
+These visuals indicate number of days different tools were used in a school. As the dates corresponding to different tools might be overlapping, chart should be used to compare number of days of engagement with different tools, we cannot deduce total number of days by adding up number on y-axis. All users both logged-in and anonymous users are considered to deduce these numbers.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
 </p>
+
 <meta charset="utf-8">
+
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="{{site.github.url}}/data/style.css"/>
@@ -21,7 +23,9 @@ These graphs show the monthly variation of range of values of 'number of student
 </script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
 <style scoped>
+
 p{
 text-align: centre;
 margin: 10px 0;
@@ -62,15 +66,15 @@ font-size: larger;
   stroke: #000;
 }
 
-
 .legend {
 	       padding: 5px;
 	       font: 10px sans-serif;
 	       background: yellow;
 	       box-shadow: 2px 2px 1px #888;
 	    }
-</style>
-</head>
+   </style>
+ </head>
+
 <div>
 
 <div class="btn-group pull-left">
@@ -90,10 +94,8 @@ font-size: larger;
 
 <div id="chart1" class="chart"></div>
 
-</body>
-
 <script type="text/javascript">
-	{% include D3/percn_activ_domain_d3.js %}
+	{% include D3/tools_num_days_d3.js%}
 </script>
 
 

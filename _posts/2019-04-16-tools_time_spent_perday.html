@@ -2,17 +2,19 @@
 layout: projectpages
 title: ""
 author: "partha"
-categories: vis_tv_avg_tools_time_spent
-caption: Monthly variation of Average Time Spent
-tags: [tools, time spent]
+categories: vis_tools_time_spent_day
+caption: Average Time Spent by Students in a Day
+tags: [tools, total number of students]
 image:
       feature : visuals_ss.png
 ---
 
 <p >
-These visuals are for looking at monthly variation of range of values of 'average time spent in a day' on different domain-tools by all the students of class in a particular day(both logged-in and anonymous). In a given month, daily time spent by all students(taken together) on each domain is calculated, this is averaged to get a average time spent in a month. Minimum and maximum of these daily average time spent numbers for each domain are plotted every month (across all schools of a given state).&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
+These graphs indicate average time spent by all students in a class on different tools in a day. Chart should be used to compare time spent on different tools, but cannot deduce total time spent in a day by adding up numbers on y-axis. Both logged-in and anonymous users are considered for calculations.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
 </p>
+
 <meta charset="utf-8">
+
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="{{site.github.url}}/data/style.css"/>
@@ -21,7 +23,9 @@ These visuals are for looking at monthly variation of range of values of 'averag
 </script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
 <style scoped>
+
 p{
 text-align: centre;
 margin: 10px 0;
@@ -62,15 +66,15 @@ font-size: larger;
   stroke: #000;
 }
 
-
 .legend {
 	       padding: 5px;
 	       font: 10px sans-serif;
 	       background: yellow;
 	       box-shadow: 2px 2px 1px #888;
 	    }
-</style>
-</head>
+   </style>
+ </head>
+
 <div>
 
 <div class="btn-group pull-left">
@@ -90,10 +94,8 @@ font-size: larger;
 
 <div id="chart1" class="chart"></div>
 
-</body>
-
 <script type="text/javascript">
-	{% include D3/avg_time_domain.js %}
+	{% include D3/tools_time_spent_perday_d3.js%}
 </script>
 
 
