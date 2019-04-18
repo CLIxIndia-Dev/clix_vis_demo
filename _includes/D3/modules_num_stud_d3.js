@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-    render_chart(csv_data = "{{site.github.url}}/data/all_states_progress_num_users_viz_top50.csv");
+    render_chart(csv_data = "{{site.github.url}}/data/all_states_modulewise_stud.csv");
  });
 
 function render_chart(csv_data){
@@ -18,7 +18,7 @@ var y = d3.scale.linear()
     .rangeRound([height, 0]);
 
 var color = d3.scale.ordinal()
-    .range(["#3366cc", "#dc3912", "#ff9900", "#109618", "#990099", "#0099c6", "#dd4477", "#66aa00", "#b82e2e", "#316395"])
+    .range(["#3366cc", "#dc3912", "#ff9900", "#109618", "#990099", "#0099c6", "#dd4477", "#66aa00", "#b82e2e", "#316395", "#994499", "#22aa99", "#aaaa11", "#6633cc", "#e67300", "#8b0707", "#651067", "#329262", "#5574a6", "#3b3eac"])
 
 // var color = d3.scale.linear()
 //               .range(["#3366cc", "#dc3912", "#ff9900", "#109618",
@@ -359,20 +359,20 @@ d3.selectAll(".m")
 
 					var csv_data;
 					if(date == "Chhattisgarh"){
-						csv_data = "{{site.github.url}}/data/ct_progress_num_users_viz_top50.csv";
+						csv_data = "{{site.github.url}}/data/ct_modulewise_stud.csv";
 						var state_code = 'Chhattisgarh'
 					}else if(date == "Rajasthan"){
-						csv_data = "{{site.github.url}}/data/rj_progress_num_users_viz_top50.csv";
+						csv_data = "{{site.github.url}}/data/rj_modulewise_stud.csv";
 						var state_code = 'Rajasthan'
 					}else if(date == "Mizoram"){
-						csv_data = "{{site.github.url}}/data/mz_progress_num_users_viz_top50.csv";
+						csv_data = "{{site.github.url}}/data/mz_modulewise_stud.csv";
 						var state_code = 'Mizoram'
 					}else if(date == "Telangana"){
-						csv_data = "{{site.github.url}}/data/tg_progress_num_users_viz_top50.csv";
+						csv_data = "{{site.github.url}}/data/tg_modulewise_stud.csv";
 						var state_code = 'Telangana'
 					}else{
 					//All states top 50 schools
-						csv_data = "{{site.github.url}}/data/all_states_progress_num_users_viz_top50.csv";
+						csv_data = "{{site.github.url}}/data/all_states_modulewise_stud.csv";
 						var state_code = 'All States'
 					}
     d3.csv(csv_data, function(error, data) {
