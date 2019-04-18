@@ -1,7 +1,5 @@
-
-
 $( document ).ready(function() {
-    render_chart(json_data = "{{site.github.url}}/data/cumul_time_tool_tv.json");
+    render_chart(json_data = "{{site.github.url}}/data/all_states_tool_stud_monthly.json");
  });
 
 function render_chart(json_data){
@@ -14,7 +12,7 @@ function render_chart(json_data){
     n = dataset["series"].length, // Number of Layers
     m = dataset["layers"].length, // Number of Samples in 1 layer
 
-    yGroupMax = d3.max(dataset["layers"], function(layer) { return d3.max(layer, function(d) { return d.y; }); });
+    yGroupMax = d3.max(dataset["layers"], function(layer) { return d3.max(layer, function(d) { return d.y1; }); });
     yGroupMin = d3.min(dataset["layers"], function(layer) { return d3.min(layer, function(d) { return d.y0; }); });
 
     var margin = {top: 50, right: 70, bottom: 50, left: 100},
@@ -60,8 +58,8 @@ function render_chart(json_data){
         .attr("x", function(d, i, j) { return x(d.month_year) + x.rangeBand() / n * j; })
         .attr("width", x.rangeBand() / (n))
         .transition()
-        .attr("y", function(d) { return y(d.y); })
-        .attr("height", function(d) { return height - y(d.y-d.y0)})
+        .attr("y", function(d) { return y(d.y1); })
+        .attr("height", function(d) { return height - y(d.y1-d.y0)})
         .attr("class","bar")
         .style("fill",function(d){return dataset["colors"][d.colorIndex];})
 
@@ -79,21 +77,21 @@ function render_chart(json_data){
         .attr("y", 0)
         .attr("dx", ".71em")
         .attr("dy", "-.71em")
-        .text("Time spent (minutes) on Tools by all Students in a Day (Month wise)");
+        .text("Number of Students* Used Tools Section of Platform (Month wise)");
 
 svg.append("text")
         .attr("x", width/30)
         .attr("y", 450)
         .attr("dx", ".71em")
         .attr("dy", "-.71em")
-        .text("*By all students both logged-in and anonymous in a day");
+        .text("*Only logged-in students, excluding anonymous");
 
      svg.append("text")
         .attr("x", width/2.5)
         .attr("y", 14)
         .attr("dx", ".71em")
         .attr("dy", "-.71em")
-        .text("(All states - 112 schools)");
+        .text("(All states)");
 
 
     // add legend
@@ -104,7 +102,7 @@ svg.append("text")
       .data(dataset["colors"])
       .enter()
       .append("rect")
-      .attr("x", width-margin.right + 40)
+      .attr("x", width - margin.right + 40)
       .attr("y", function(d, i){ return i *  20;})
       .attr("width", 10)
       .attr("height", 10)
@@ -116,35 +114,37 @@ svg.append("text")
       .data(dataset["series"])
       .enter()
     .append("text")
-    .attr("x", width-margin.right + 25 +  40)
+    .attr("x", width-margin.right  + 40 + 25)
     .attr("y", function(d, i){ return i *  20 + 9;})
     .text(function(d){return d});
 
     var tooltip = d3.select("body")
     .append('div')
     .attr('class', 'tooltip');
-    
+
     tooltip.append('div')
     .attr('class', 'month');
     tooltip.append('div')
-     .attr('class', 'toolname');
+     .attr('class', 'toolname')
     tooltip.append('div')
     .attr('class', 'tempRange');
 
     svg.selectAll("rect")
     .on('mouseover', function(d) {
 
-        if(!d.colorIndex) return null;
+        //if(!d.colorIndex) return null;
+
         tooltip.select('.toolname').html("<b>" + dataset['series'][d.colorIndex] + "</b>");
 
-        if(!d.month_year)return null;
+        //if(!d.month_year) return null;
 
         tooltip.select('.month').html("<b>" + d.month_year + "</b>");
 
-        if(d.y0 == 5 && d.y == 10){
+        console.log(d.y0)
+        if(d.y0 == 0 && d.y1 == 1){
          tooltip.select('.tempRange').html('No Tool Usage');
         }
-        else {tooltip.select('.tempRange').html(d.y0 + " min" + " to " + d.y + " min");}
+        else {tooltip.select('.tempRange').html(d.y0 + " " + " to " + d.y1 + " ");}
 
         tooltip.style('display', 'block');
         tooltip.style('opacity',2);
@@ -167,23 +167,17 @@ svg.append("text")
 					var date = this.getAttribute("value");
 
 					var str;
-					var num_schools;
 					if(date == "Chhattisgarh"){
-						str = "{{site.github.url}}/data/ct_time_tool_tv.json";
-						num_schools = 23;
+						str = "{{site.github.url}}/data/ct_tool_stud_monthly.json";
 					}else if(date == "Rajasthan"){
-						str = "{{site.github.url}}/data/rj_time_tool_tv.json";
-						num_schools = 54;
+						str = "{{site.github.url}}/data/rj_tool_stud_monthly.json";
 					}else if(date == "Mizoram"){
-						str = "{{site.github.url}}/data/mz_time_tool_tv.json";
-						num_schools = 11;
+						str = "{{site.github.url}}/data/mz_tool_stud_monthly.json";
 					}else if(date == "Telangana"){
-						str = "{{site.github.url}}/data/tg_time_tool_tv.json";
-						num_schools = 24;
+						str = "{{site.github.url}}/data/tg_tool_stud_monthly.json";
 					}else{
 					//All states top 50 schools
-						str = "{{site.github.url}}/data/cumul_time_tool_tv.json";
-						num_schools = 112;
+						str = "{{site.github.url}}/data/all_states_tool_stud_monthly.json";
 					}
 
  // var stack = d3.layout.stack();
@@ -195,7 +189,7 @@ svg.append("text")
     n = dataset["series"].length, // Number of Layers
     m = dataset["layers"].length, // Number of Samples in 1 layer
 
-    yGroupMax = d3.max(dataset["layers"], function(layer) { return d3.max(layer, function(d) { return d.y; }); });
+    yGroupMax = d3.max(dataset["layers"], function(layer) { return d3.max(layer, function(d) { return d.y1; }); });
     yGroupMin = d3.min(dataset["layers"], function(layer) { return d3.min(layer, function(d) { return d.y0; }); });
 
     //var margin = {top: 50, right: 50, bottom: 50, left: 120},
@@ -248,8 +242,8 @@ svg.append("text")
         .attr("x", function(d, i, j) { return x(d.month_year) + x.rangeBand() / n * j; })
         .attr("width", x.rangeBand() / (n))
         .transition()
-        .attr("y", function(d) { return y(d.y); })
-        .attr("height", function(d) { return height - y(d.y-d.y0)})
+        .attr("y", function(d) { return y(d.y1); })
+        .attr("height", function(d) { return height - y(d.y1-d.y0)})
         .attr("class","bar")
         .style("fill",function(d){return dataset["colors"][d.colorIndex];});
 
@@ -276,21 +270,21 @@ svg.append("text")
         .attr("y", 0)
         .attr("dx", ".71em")
         .attr("dy", "-.71em")
-        .text("Time spent (minutes) on Tools in a Day (Month wise)*");
+        .text("Number of Students* Used Tools Section of Platform (Monthwise)");
 
        svg.append("text")
         .attr("x", width/2.5)
         .attr("y", 14)
         .attr("dx", ".71em")
         .attr("dy", "-.71em")
-        .text("(" + date + " - " + num_schools+ ")");
+        .text("(" + date + ")");
 
       svg.append("text")
         .attr("x", width/30)
         .attr("y", 450)
         .attr("dx", ".71em")
         .attr("dy", "-.71em")
-        .text("*By all students both logged-in and anonymous in a day");
+        .text("*Only logged-in students, excluding anonymous");
 
     // add legend
     var legend = svg.append("g")
@@ -300,7 +294,7 @@ svg.append("text")
       .data(dataset["colors"])
       .enter()
       .append("rect")
-      .attr("x", width-margin.right +  40)
+      .attr("x", width - margin.right +  40)
       .attr("y", function(d, i){ return i *  20;})
       .attr("width", 10)
       .attr("height", 10)
@@ -312,7 +306,7 @@ svg.append("text")
       .data(dataset["series"])
       .enter()
     .append("text")
-    .attr("x", width-margin.right + 25 + 40)
+    .attr("x", width - margin.right + 25 +  40)
     .attr("y", function(d, i){ return i *  20 + 9;})
     .text(function(d){return d});
 
@@ -323,23 +317,31 @@ svg.append("text")
     tooltip.append('div')
     .attr('class', 'month');
     tooltip.append('div')
-     .attr('class', 'toolname');
+    .attr('class', 'tempRange');
+
+    var tooltip = d3.select("body")
+    .append('div')
+    .attr('class', 'tooltip');
+
+    tooltip.append('div')
+    .attr('class', 'month');
+    tooltip.append('div')
+     .attr('class', 'toolname')
     tooltip.append('div')
     .attr('class', 'tempRange');
-   
+
     svg.selectAll("rect")
     .on('mouseover', function(d) {
-        if(!d.colorIndex) return null;
+
+        //if(!d.colorIndex) return null;
         tooltip.select('.toolname').html("<b>" + dataset['series'][d.colorIndex] + "</b>");
-
-        if(!d.month_year)return null;
-
+        //if(!d.month_year)return null;
         tooltip.select('.month').html("<b>" + d.month_year + "</b>");
 
-        if(d.y0 == 5 && d.y == 10){
+        if(d.y0 == 0 && d.y == 1){
          tooltip.select('.tempRange').html('No Tool Usage');
         }
-        else {tooltip.select('.tempRange').html(d.y0 + " min" + " to " + d.y + " min");}
+        else {tooltip.select('.tempRange').html(d.y0 + " " + " to " + d.y1 + " ");}
 
         tooltip.style('display', 'block');
         tooltip.style('opacity',2);
@@ -356,7 +358,6 @@ svg.append("text")
         tooltip.style('display', 'none');
         tooltip.style('opacity',0);
     });
-
 
 
  });

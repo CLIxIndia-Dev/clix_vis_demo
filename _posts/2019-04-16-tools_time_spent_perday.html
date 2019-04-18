@@ -1,0 +1,103 @@
+---
+layout: projectpages
+title: ""
+author: "partha"
+categories: vis_tools_time_spent_day
+caption: Average Time Spent by Students in a Day
+tags: [tools, total number of students]
+image:
+      feature : visuals_ss.png
+---
+
+<p >
+These graphs indicate average time spent by all students in a class on different tools in a day. Chart should be used to compare time spent on different tools, but cannot deduce total time spent in a day by adding up numbers on y-axis. Both logged-in and anonymous users are considered for calculations.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
+</p>
+
+<meta charset="utf-8">
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{site.github.url}}/data/style.css"/>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js">
+</script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<style scoped>
+
+p{
+text-align: centre;
+margin: 10px 0;
+display: block;
+font-family: Georgia, serif;	
+font-size: large;
+padding: 0;
+line-height: 1.65;	
+}
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+
+.menu-list a {
+color: black; 
+}
+
+.project-grid-view a{
+color: black
+}
+
+.project-grid-view p{
+text-align: justify;
+}	
+.post-date a{
+font-size: larger; 
+}
+
+.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.legend {
+	       padding: 5px;
+	       font: 10px sans-serif;
+	       background: yellow;
+	       box-shadow: 2px 2px 1px #888;
+	    }
+   </style>
+ </head>
+
+<div>
+
+<div class="btn-group pull-left">
+		<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+				 State Level Numbers <span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li><a class="m" value="Chhattisgarh" href="#">Chhattisgarh</a></li>
+		<li><a class="m" value="Rajasthan" href="#">Rajasthan</a></li>
+		<li><a class="m" value="Mizoram" href="#">Mizoram</a></li>
+		<li><a class="m" value="Telangana" href="#">Telangana</a></li>
+		<li><a class="m" value="All States" href="#">All States</a></li>
+		</ul>
+</div>
+</div>
+
+
+<div id="chart1" class="chart"></div>
+
+<script type="text/javascript">
+	{% include D3/tools_time_spent_perday_d3.js%}
+</script>
+
+
+</html>
+
