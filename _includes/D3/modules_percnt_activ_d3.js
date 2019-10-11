@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     render_chart(csv_data = "{{site.github.url}}/data/all_states_modulewise_activ_visit.csv");
  });

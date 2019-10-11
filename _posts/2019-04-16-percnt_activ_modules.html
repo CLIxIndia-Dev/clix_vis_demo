@@ -8,13 +8,11 @@ tags: [Modules, percentage of activities visited]
 image:
       feature : visuals_ss.png
 ---
-
-<p >
-These visuals indicate average percentage of activities visited by students in different modules. Summing up of numbers along y-axis dont make any sense. Both logged-in and buddy users are considered for calculations.&nbsp;<a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>
+<p style="font-size: small">
+These visuals indicate average percentage of activities visited by students in different modules. Summing up of numbers along y-axis dont make any sense. Both logged-in and buddy users are considered for <a href="{{site.github.url}}/pages/documentation.html#calculation-metrics1">calculations</a>.
 </p>
 
 <meta charset="utf-8">
-
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="{{site.github.url}}/data/style.css"/>
@@ -35,6 +33,7 @@ font-size: large;
 padding: 0;
 line-height: 1.65;	
 }
+
 .axis path,
 .axis line {
 	fill: none;
@@ -74,26 +73,23 @@ font-size: larger;
 	    }
    </style>
  </head>
-
-<div>
-
-<div class="btn-group pull-left">
+ <div>
+<div class="btn-group pull-left" style="margin: 5px">
 		<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
 				 State Level Numbers <span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu" role="menu">
-			<li><a class="m" value="Chhattisgarh" href="#">Chhattisgarh</a></li>
+		<li><a class="m" value="Chhattisgarh" href="#">Chhattisgarh</a></li>
 		<li><a class="m" value="Rajasthan" href="#">Rajasthan</a></li>
 		<li><a class="m" value="Mizoram" href="#">Mizoram</a></li>
 		<li><a class="m" value="Telangana" href="#">Telangana</a></li>
 		<li><a class="m" value="All States" href="#">All States</a></li>
 		</ul>
-</div>
-</div>
 
+</div>
+</div>
 
 <div id="chart1" class="chart"></div>
-
 <script type="text/javascript">
 	{% include D3/modules_percnt_activ_d3.js%}
 </script>

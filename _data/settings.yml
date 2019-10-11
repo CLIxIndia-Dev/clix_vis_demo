@@ -5,11 +5,11 @@ author:
   twitter: 
 
 menu:
-- {name: 'About', file: 'about.html'}
-- {name: 'Visualisations', file: 'visualisations.html'}
-- {name: 'Documentation', file: 'documentation.html'}
-- {name: 'FAQ', file: 'faq.html'}
-- {name: 'Contact', file: 'contact.html'}
+- {name: 'Home', link: 'http://localhost:3000/home'}
+- {name: 'About', link: 'http://localhost:3000/about'}
+- {name: 'Logout', link: 'http://localhost:3000/login'}
+- {name: 'FAQ', link: 'http://localhost:3000/faq'}
+- {name: 'Contact', lik: 'http://localhost:3000/contact'}
 
 social:
 - {icon: , link: }
