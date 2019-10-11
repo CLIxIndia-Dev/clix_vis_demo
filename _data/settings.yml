@@ -5,11 +5,11 @@ author:
   twitter: 
 
 menu:
-- {name: 'Home', link: 'http://localhost:3000/home'}
-- {name: 'About', link: 'http://localhost:3000/about'}
-- {name: 'Logout', link: 'http://localhost:3000/login'}
-- {name: 'FAQ', link: 'http://localhost:3000/faq'}
-- {name: 'Contact', lik: 'http://localhost:3000/contact'}
+- {name: 'Home', link: 'http://103.36.84.138:3000/home'}
+- {name: 'About', link: 'http://103.36.84.138:3000/about'}
+- {name: 'Logout', link: 'http://103.36.84.138:3000/login'}
+- {name: 'FAQ', link: 'http://103.36.84.138:3000/faq'}
+- {name: 'Contact', lik: 'http://103.36.84.138:3000/contact'}
 
 social:
 - {icon: , link: }
