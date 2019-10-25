@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-    render_chart(csv_data = "{{site.github.url}}/data/all_states_toolwise_timesp.csv");
+    render_chart(csv_data = "{{site.github.url}}/data/vis_data/all_states_all_months_toolwise_timespperday.csv");
  });
 
 function render_chart(csv_data){
@@ -97,7 +97,7 @@ var y_orig; //to store original y-posn
       .attr("x", 390)
       .attr("y",   50)
       .style("text-anchor", "middle")
-      .text("Average Time Spent by all Students in a class in a Day (Jul, 2018 - Mar, 2019)")
+      .text("Average Time Spent by all Students in a class in a Day")
       .style("font-size", "18px")
       .style("fill", 'black')
 
@@ -105,7 +105,7 @@ var y_orig; //to store original y-posn
       .attr("x", 390)
       .attr("y",  80)
       .style("text-anchor", "middle")
-      .text("(Jul, 2018 - Mar, 2019: All States)")
+      .text("(Jul, 2018 - Oct, 2019: All States)")
       .style("font-size", "18px")
       .style("fill", 'black')
 
@@ -359,20 +359,20 @@ d3.selectAll(".m")
 
 					var csv_data;
 					if(date == "Chhattisgarh"){
-						csv_data = "{{site.github.url}}/data/ct_toolwise_timesp.csv";
+						csv_data = "{{site.github.url}}/data/vis_data/ct_all_months_toolwise_timespperday.csv";
 						var state_code = 'Chhattisgarh'
 					}else if(date == "Rajasthan"){
-						csv_data = "{{site.github.url}}/data/rj_toolwise_timesp.csv";
+						csv_data = "{{site.github.url}}/data/vis_data/rj_all_months_toolwise_timespperday.csv";
 						var state_code = 'Rajasthan'
 					}else if(date == "Mizoram"){
-						csv_data = "{{site.github.url}}/data/mz_toolwise_timesp.csv";
+						csv_data = "{{site.github.url}}/data/vis_data/mz_all_months_toolwise_timespperday.csv";
 						var state_code = 'Mizoram'
 					}else if(date == "Telangana"){
-						csv_data = "{{site.github.url}}/data/tg_toolwise_timesp.csv";
+						csv_data = "{{site.github.url}}/data/vis_data/tg_all_months_toolwise_timespperday.csv";
 						var state_code = 'Telangana'
 					}else{
 					//All states top 50 schools
-						csv_data = "{{site.github.url}}/data/all_states_toolwise_timesp.csv";
+						csv_data = "{{site.github.url}}/data/vis_data/all_states_all_months_toolwise_timespperday.csv";
 						var state_code = 'All States'
 					}
     d3.csv(csv_data, function(error, data) {
@@ -443,7 +443,7 @@ d3.selectAll(".m")
       .attr("x", 390)
      .attr("y", 80)
       .style("text-anchor", "middle")
-      .text("(Jul, 2018 - Mar, 2019: " + state_code + ")")
+      .text("(Jul, 2018 - Oct, 2019: " + state_code + ")")
       .style("font-size", "18px")
       .style("fill", 'black')
 

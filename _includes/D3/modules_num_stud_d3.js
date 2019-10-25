@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-    render_chart(csv_data = "{{site.github.url}}/data/all_states_modulewise_stud.csv");
+    render_chart(csv_data = "{{site.github.url}}/data/vis_data/all_states_all_months_modulewise_stud.csv");
  });
 
 function render_chart(csv_data){
@@ -97,7 +97,7 @@ var y_orig; //to store original y-posn
       .attr("x", 390)
       .attr("y",   50)
       .style("text-anchor", "middle")
-      .text("Number of Students Engaged with Different Modules (Jul, 2018 - Mar, 2019)")
+      .text("Number of Students Engaged with Different Modules (Jul, 2018 - Oct, 2019)")
       .style("font-size", "18px")
       .style("fill", 'black')
 
@@ -359,20 +359,20 @@ d3.selectAll(".m")
 
 					var csv_data;
 					if(date == "Chhattisgarh"){
-						csv_data = "{{site.github.url}}/data/ct_modulewise_stud.csv";
+						csv_data = "{{site.github.url}}/data/vis_data/ct_all_months_modulewise_stud.csv";
 						var state_code = 'Chhattisgarh'
 					}else if(date == "Rajasthan"){
-						csv_data = "{{site.github.url}}/data/rj_modulewise_stud.csv";
+						csv_data = "{{site.github.url}}/data/vis_data/rj_all_months_modulewise_stud.csv";
 						var state_code = 'Rajasthan'
 					}else if(date == "Mizoram"){
-						csv_data = "{{site.github.url}}/data/mz_modulewise_stud.csv";
+						csv_data = "{{site.github.url}}/data/vis_data/mz_all_months_modulewise_stud.csv";
 						var state_code = 'Mizoram'
 					}else if(date == "Telangana"){
-						csv_data = "{{site.github.url}}/data/tg_modulewise_stud.csv";
+						csv_data = "{{site.github.url}}/data/vis_data/tg_all_months_modulewise_stud.csv";
 						var state_code = 'Telangana'
 					}else{
 					//All states top 50 schools
-						csv_data = "{{site.github.url}}/data/all_states_modulewise_stud.csv";
+						csv_data = "{{site.github.url}}/data/vis_data/all_states_all_months_modulewise_stud.csv";
 						var state_code = 'All States'
 					}
     d3.csv(csv_data, function(error, data) {
@@ -443,7 +443,7 @@ d3.selectAll(".m")
       .attr("x", 390)
      .attr("y", 80)
       .style("text-anchor", "middle")
-      .text("(Jul, 2018 - Mar, 2019: " + state_code + ")")
+      .text("(Jul, 2018 - Oct, 2019: " + state_code + ")")
       .style("font-size", "18px")
       .style("fill", 'black')
 
