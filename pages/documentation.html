@@ -15,7 +15,10 @@ title:
 			<li><a href="{{site.github.url}}/pages/documentation.html#data_source1">1.1 Data Source</a>
 			<li><a href="{{site.github.url}}/pages/documentation.html#data_processing1">1.2 Data Processing</a>
 			<li><a href="{{site.github.url}}/pages/documentation.html#calculation_metrics1">1.3 Calculation Metrics</a>
-
+                        <a href="{{site.github.url}}/pages/documentation.html#school_level_vis">School Dashboard Visualisations</a>
+			<li><a href="{{site.github.url}}/pages/documentation.html#data_source3">3.1 Data Source</a>
+		       <li><a href="{{site.github.url}}/pages/documentation.html#data_processing3">3.2 Data Processing</a>
+		       <li><a href="{{site.github.url}}/pages/documentation.html#calculation_metrics3">3.3 Calculation Metrics</a>
 	
 	</div>
     </div>
@@ -26,7 +29,7 @@ title:
           <h2>Getting Started</h2>
              <p>This page contains documentation of methodology and data processing involved in generating visualisations for this website.
 		We have a section for each type(based on data source) of visualisation, with all the information about data source, processing and 
-		different metrics used. The questions underlying these visualisations are are outcome of collaborative exploration between CLIx technology team and implementation, domain, research and various other teams.</p>
+		different metrics used. The questions underlying these visualisations are outcome of collaborative exploration between CLIx technology team and implementation, domain, research and various other teams.</p>
 
 
 	 <div class="section" id="modules_data_vis">
@@ -54,7 +57,7 @@ title:
 		       <p>
 		       As students can explore the courses even without logging into the platform, each of such entry corresponds to anonymous 
 		       user ‘0’. But while fetching data related to a particular module the extraction of anonymous user’s data is not considered 
-		       unlike to tools data as they are generated from 3rd party not by the platform itself.
+		       unlike tools data as they are generated from 3rd party not by the platform itself.
 		       </p>
 		      <div class="section" id="data_processing2"> 
 			<h4>Data Processing:</h4>
@@ -167,17 +170,83 @@ title:
 			 into that particular tool). This number for each tool is averaged across observation period. Please note that days across 
 			 which each tool's time spent is being averaged could be different, so cannot add-up the tool numbers in a school to 
 			 talk about total time spent in a day. </p>   
-		    <!--  
 		      <h5> Monthly Variation of Time Spent on Tools per day</h5>
 		         <h6> How is the time spent by all students in a day on different tools changing over months? </h6>
-		         <p>In a given month, daily time spent on different tools by students is calculated for all schools. Range of these 
-			 daily time spent numbers are represented using min/max. For this, we calculate time spent on tools , for each day, attendance (as a subset of total students present on that day) for each tool is 
-			 calculated. This number is averaged across all dates for which observations are avilable. This gives us the average number of students using a 
-			 tool out of all the students present on a particular day. Here averaging is done considering same dates for 
-			 all tools in a given school.</p>
-                   --> 
+		         <p>In a given month, daily time spent on different tools by all students is calculated for all schools. Range of these 
+			 daily time spent numbers are represented using min/max.</p>
                       </p>
 
 		    </div></br> 
+           <div class="section" id="school_level_vis">
+	     <h3> School Dashboard Visualisations</h3> 
+	        <!--      	
+		        <blockquote class="epigraph">
+			 <p>A language isn't something you learn so much as something you join.</p>
+			 <p class="attribution">—<a class="reference external" href="http://arikaokrent.com/">Arika Okrent</a></p>
+	   		</blockquote>
+                -->
+   	   	       <div class="section" id="data_source3">
+		       <h4>Data Source:</h4>
+		       <p>Primary source of data for these visuals is syncthing data which comprises of tools data (json logs) and modules data (csv files). 
+		       At the time of development of these visuals activity timestamp data was not available. Tools data is json file generated whenever a 
+		       user accesses Tools/Apps section of the CLIx software. Each module(progress) csv, lists the students along with their buddies if any 
+		       and quantitative data in a cummulative way.
+                       </p>
+                       <h4>Important Note:</h4>
+		       <p> One important aspect of project implementation is that a typical student gets the same id throughout the observation period only 
+		       60%(as per rough estimates) of the time. So it is hard to track the progress of an individual student. Also modules data is registered 
+		       with a margin of error close to a day, as scripts are triggered periodically whenever there is power. Tools data is registered at precise 
+		       times as and when they occur.</p>
+                       </div>
+		      <div class="section" id="data_processing3"> 
+			<h4>Data Processing:</h4>
+	 	       <p>To process tools data, we first convert json files into csv files extracting only information relevant for our analysis.
+		       All these csv files of tools across all the schools is collated to create one big csv file. Each row of 
+		       this <a href="{{site.github.url}}/pages/data_source.html">csv file</a> corresponds to a unique log of a user with the 
+		       following features (columns): </br></br>
 
+		      <i>school_server_code</i>: Unique code of the school in which log is generated</br>
+		      <i>user_id</i>: Unique id of a student creating the log</br>
+		      <i>tool_name</i>: Tool name of the tool being accessed</br>
+		      <i>created_at</i>: Timestamp of creation of the log </br>
+		      <i>date_created</i>: Date of creation of log </br>
+		      <i>time_spent</i>: Time spent by a student(=user_id) on the tool(=tool_name) on a given day(=date_created). This is 
+		      calculated by taking time difference between first and last log time_stamps of a every user_id in a given day.</br>
+		      <i>state_code</i>: State in which machine is located</br></br>
+		      </p>
+                      <p> Modules data is generated by collating progress csv files generated in a given school. Collation is achieved by 
+		      combining csvs and then filtering out only those logs where there is increase in percentage of student activity. This 
+		      results in a single csv for a given school with data corresponding to all students with their progression through modules.</p>
+
+		      </div>
+                    <div class="section" id="calculation_metrics3">
+		        <h4>Calculation of Metrics:</h4> 
+                        <p>
+			<h5>Attendance of Modules and Tools</h5> 
+			  <h6> How many students were present working on modules or tools section on a given day? </h6>
+		          <p>Each bar represents a unique number of logins for tools and modules section of the platform.
+			   In a given school, for each day that has some login information, number of unique login ids are calculated. This 
+			   is done for both tools and modules data independently and stacked bar chart is constructed using this data. Please note
+			   that there is a margin of error in determing exact day on which module was done, though 80 percent of the times it is exact. </p>
+                       <h5>CLIx Server Usage</h5>
+		          <h6> How are days modules and tools are rolled out during the observation period? How many days the server was running but there was no activity?</h6> 
+		          <p>In a given school, we are trying to estimate number of days only tools are done, only modules are done and modules-tools done together. 
+			  Key idea we wanted to use is - If a student does a module and the related tool within 1 day(earlier or later), we want to consider that the 
+			  student has done those tools and modules together. we know timestamp of module usage upto the nearest days and tools usage timestamp 
+			  exactly, so there is always a margin of error. But this is the best estimate we could think of. Also we consider the tool or module is 
+			  done if there is a log, irrespective of how much they engaged with them.</p>
+                       <h5>Students Engagement with Modules</h5>
+		          <h6> How many students participated in different modules on a given day of a school CLIx lab? </h6> 
+		          <p>For a given school, we calculate the number of unique logins attempting different modules on a particular day. Please note that 
+			  same student might have done more than one module in a given day and we count him/her for every different module he/she attempts.</p>
+ 
+                       <h5>Students Engagement with Tools</h5>
+		       <h6>How many students participated in different tools on a given day of a school CLIx lab? </h6> 
+		         <p>For a given school, we calculate the number of unique logins attempting different tools on a particular day. Please note that whenever 
+			  there is anonymous user(=0), we will count it as one login. Also same student might have 
+			 done more than one tool in a day and we count him/her for every different tool he/she attempts. </p>
+
+                      </p>
+
+		    </div></br>
 </section>
