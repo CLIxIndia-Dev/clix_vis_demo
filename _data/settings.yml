@@ -5,11 +5,11 @@ author:
   twitter: 
 
 menu:
-- {name: 'About', file: 'about.html'}
-- {name: 'Visualisations', file: 'visualisations.html'}
-- {name: 'Documentation', file: 'documentation.html'}
-- {name: 'FAQ', file: 'faq.html'}
-- {name: 'Contact', file: 'contact.html'}
+- {name: 'Home', link: 'https://clixdashboard.tiss.edu/home'}
+- {name: 'About', link: 'https://clixdashboard.tiss.edu/about'}
+- {name: 'FAQ', link: 'https://clixdashboard.tiss.edu/faq'}
+- {name: 'Contact', lik: 'https://clixdashboard.tiss.edu/contact'}
+- {name: 'Logout', link: 'https://clixdashboard.tiss.edu/login'}
 
 social:
 - {icon: , link: }
